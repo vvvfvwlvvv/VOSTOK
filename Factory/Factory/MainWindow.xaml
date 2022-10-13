@@ -1,0 +1,41 @@
+﻿<Window x:Class="Factory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Factory"
+        mc:Ignorable="d"
+        Title="Factory" Height="420" Width="376">
+    <Grid x:Name="fGrid" ShowGridLines="False">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.4*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.7*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="cbCity" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" SelectionChanged="cbCity_SelectionChanged" ItemsSource="{Binding city}"></ComboBox>
+        <ComboBox x:Name="cbWorkshop" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" ItemsSource="{Binding workshop}"></ComboBox>
+        <ComboBox x:Name="cbEmployee" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="3" ItemsSource="{Binding employee}"></ComboBox>
+        <ComboBox x:Name="cbBrigade" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="3" ItemsSource="{Binding brigade}" SelectionChanged="cbBrigade_SelectionChanged"></ComboBox>
+        <ComboBox x:Name="cbShift" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="3" ItemsSource="{Binding shift}"/>
+        <Button Grid.Column="1" Grid.Row="11" Content="Очистить"></Button>
+        <Button x:Name="btnAdd" Grid.Column="3" Grid.Row="11" Content="Добавить" Click="btnAdd_Click"></Button>
+    </Grid>
+</Window>
